@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import {ConnectDB} from "@/lib/config/db"
 import { writeFile } from "fs/promises";
+import fs from 'fs'
 import BlogModel from "@/lib/models/BlogModel"
 const LoadDB=async()=>{
     await ConnectDB();
@@ -36,4 +37,12 @@ export async function POST(request:NextRequest){
     }
     await BlogModel.create(blogData);
     return NextResponse.json({success:true,msg:"Blog Addded Successfully"});
+}
+
+export async function DELETE(request:NextRequest){
+    const id=await request.nextUrl.searchParams.get('id');
+    const blog =await BlogModel.findById(id);
+    fs.unlink(`./public/${blog.image}`,()=>{});
+    await BlogModel.findByIdAndDelete(id);
+    return NextResponse.json({msg:"Blog Deleted Successfully"})
 }
