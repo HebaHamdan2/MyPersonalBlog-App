@@ -7,8 +7,8 @@ const LoadDB=async()=>{
 }
 LoadDB();
 export async function GET(){
-    console.log("Blog GET Hit");
-    return NextResponse.json({msg:"API Working"}); 
+     const blogs=await BlogModel.find({});
+    return NextResponse.json({blogs}); 
 }
 export async function POST(request:NextRequest){
     const formData=await request.formData();
