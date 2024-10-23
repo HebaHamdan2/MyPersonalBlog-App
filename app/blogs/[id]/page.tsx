@@ -1,7 +1,7 @@
 "use client"; 
 
 import { Footer } from '@/Components/Footer';
-import { blog_data } from '@/static/staticdata';
+import axios from 'axios';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
@@ -13,7 +13,7 @@ type Props = {
 }
 
 const Page = ({ params }: Props) => {
-    const [data, setData] = useState(null);
+    const [data, setData] = useState<any>(null); // Use 'any' until you define the data type
     const [id, setId] = useState<string | undefined>(undefined);
 
     useEffect(() => {
@@ -26,17 +26,16 @@ const Page = ({ params }: Props) => {
 
     const fetchBlogData = async () => {
         if (id) {
-            const blogItem = blog_data.find(blog => Number(id) === blog.id);
-            if (blogItem) {
-                setData(blogItem);
-            }
+            const response = await axios.get('/api/blogs', {
+                params: { id }
+            });
+            setData(response.data);
         }
     };
 
     useEffect(() => {
         fetchBlogData();
     }, [id]);
-    
   return (data?<>
     <div className='bg-gray-200 py-5 px-5 md:px-12 lg:px-28'>
     <div className='flex justify-between items-center'>
@@ -47,12 +46,12 @@ const Page = ({ params }: Props) => {
     </div>
     <div className='text-center my-24'>
         <h1 className='text-2xl sm:text-5xl font-semibold max-w-[700px] mx-auto'>{data.title}</h1>
-        <Image className='mx-auto mt-6 border border-white rounded-full' src={data.author_img} width={60} height={60} alt='Heba Hamdan' />
+        <Image className='mx-auto mt-6 border border-white rounded-full' src='/profile_icon.png' width={60} height={60} alt='Heba Hamdan'  />
         <p className='mt-1 pb-2 text-lg max-w-[740px] mx-auto '>{data.author}</p>
     </div>  
     </div>
     <div className='mx-5 max-w-[800px] md:mx-auto mt-[-100px] mb-10'>
-        <Image className='border-4 border-white' src={data.image} width={1280} height={720} alt='blog pic' />
+        <Image className='border-4 border-white' src={data.image} width={1280} height={720} alt='blog pic' priority />
         <h1 className='my-8 text-[26px] font-semibold'>Introduction</h1>
  <p>{data.description}</p>
  <div className='my-24' >
