@@ -4,7 +4,7 @@ import { Footer } from '@/Components/Footer';
 import axios from 'axios';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 
 type Props = {
     params: Promise<{
@@ -13,7 +13,7 @@ type Props = {
 }
 
 const Page = ({ params }: Props) => {
-    const [data, setData] = useState<any>(null); // Use 'any' until you define the data type
+    const [data, setData] = useState(null);
     const [id, setId] = useState<string | undefined>(undefined);
 
     useEffect(() => {
@@ -24,18 +24,19 @@ const Page = ({ params }: Props) => {
         fetchParams();
     }, [params]);
 
-    const fetchBlogData = async () => {
+    const fetchBlogData = useCallback(async () => {
         if (id) {
             const response = await axios.get('/api/blogs', {
                 params: { id }
             });
             setData(response.data);
         }
-    };
+    }, [id]); 
 
     useEffect(() => {
         fetchBlogData();
-    }, [id]);
+    }, [fetchBlogData]); 
+
   return (data?<>
     <div className='bg-gray-200 py-5 px-5 md:px-12 lg:px-28'>
     <div className='flex justify-between items-center'>
