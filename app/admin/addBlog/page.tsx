@@ -17,7 +17,6 @@ const Page = () => {
     const name=event.target.name;
     const value=event.target.value;
     setData(data=>({...data,[name]:value}));
-    console.log(data)
   }
   const onSubmitHandler=async(e)=>{
   e.preventDefault();
