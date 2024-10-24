@@ -10,16 +10,28 @@ Welcome to my blog, built with **Next.js!** This project features an admin dashb
 - **Detailed View**: Click on a blog post to display its detailed content.
 
 ## Admin Panel
+
 - The admin panel includes three main features:
    - **Add Blog**: Easily create new blog posts.
    - **Blog List**: View and manage existing posts.
    - **Subscriptions List**: Monitor user subscriptions.
   
+## Technologies Used
+
+- **Framework:** Next.js 14
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Database:** MongoDB
+- **ORM:** Mongoose
+- **HTTP Client:** Axios
+- **Notifications:** React-Toastify
+  
 ## Project Setup
+
 1- Clone the repository:
 ```
-git clone https://github.com/HebaHamdan2/ToDoList-App.git
-cd ToDoList-App
+git clone https://github.com/HebaHamdan2/MyPersonalBlog-App.git
+cd MyPersonlBlog-App
 ```
 2- Install dependencies:
 ```
@@ -36,9 +48,16 @@ npm run dev
 ```
 5- Open your browser and navigate to **http://localhost:3000**.
 
+## Deployment
+
+The project is deployed using Vercel.
+
+## Demo
+You can check out the live demo [here](https://hebablogsapp.vercel.app/).
+
 ## Learning Experience
 
-Throughout this project, I gained valuable insights into effectively handling API routing for both the admin and user sides. A highlight was deploying the project on Vercel and troubleshooting various issues. Leveraging TypeScript and ESLint helped me detect unused data and deprecated libraries, enhancing the overall quality of the application.
+Throughout this project, I gained valuable insights into effectively handling API routing for both the admin and user sides. A highlight was deploying the project on **Vercel** and troubleshooting various issues. Leveraging TypeScript and ESLint helped me detect unused data and deprecated libraries, enhancing the overall quality of the application.
 
 ## Contributing
 
