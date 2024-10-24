@@ -24,7 +24,7 @@ export async function POST(request:NextRequest){
     const image=formData.get('image');
     const imageByteData=await image.arrayBuffer();
     const buffer=Buffer.from(imageByteData);
-    const path=`./public/${timestamp}_${image.name}`;
+    const path=`./temp/${timestamp}_${image.name}`;
     await writeFile(path,buffer);
     const imgUrl=`/${timestamp}_${image.name}`;
     const blogData={
