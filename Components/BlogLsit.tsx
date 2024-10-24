@@ -9,7 +9,6 @@ export const BlogLsit = () => {
     const fetchBlogs=async()=>{
         const response=await axios.get('/api/blogs');
         setBlogs(response.data.blogs);
-        console.log(response.data.blogs)
     }
     useEffect(()=>{
         fetchBlogs();
