@@ -27,8 +27,8 @@ const onSubmitHandler=async (e)=>{
       </div>
       <div className='text-center my-8'>
         <div className='text-3xl sm:text-5xl font-medium'>Latest Blogs</div>
-      <p className='mt-10 max-w-[740px] m-auto text-xs sm:text-base'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis distinctio ducimus tenetur qui sed aliquam laborum fugit perferendis sapiente nulla.</p>
-      <form onSubmit={onSubmitHandler} className='flex justify-between max-w-[500px] scale-75 sm:scale-100 mx-auto mt-10 border border-black shadow-[-7px_7px_0px_#000000]' action='#'>
+        <p className='mt-10 max-w-[740px] m-auto text-xs sm:text-base'>I’ve highlighted tips here, sharing my diverse interests in fashion, technology, lifestyle, and more!</p>
+        <form onSubmit={onSubmitHandler} className='flex justify-between max-w-[500px] scale-75 sm:scale-100 mx-auto mt-10 border border-black shadow-[-7px_7px_0px_#000000]' action='#'>
         <input onChange={(e)=>setEmail(e.target.value)}value={email} type="email" placeholder='Enter your email' className='pl-4 outline-none' />
          <button type='submit' className='border-l border-black py-4 px-4 sm:px-8 active:bg-gray-600 active:text-white '>Subscribe</button>
       </form>
