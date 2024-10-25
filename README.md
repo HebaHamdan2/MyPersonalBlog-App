@@ -66,7 +66,7 @@ npm run dev
 The project is deployed using Vercel.
 
 ## Demo
-You can check out the live demo [here](https://hebablogsapp.vercel.app/).
+You can check out the live demo [here](https://hebablogsapp-hebas-projects-a9daf66d.vercel.app/).
 
 ## Learning Experience
 
