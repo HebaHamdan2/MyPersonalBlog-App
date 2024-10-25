@@ -3,6 +3,11 @@
 ## Overview
 Welcome to my blog, built with **Next.js!** This project features an admin dashboard for easy management of blog posts. Admin users can effortlessly add and delete articles across various topics, including lifestyle, technology, and startups.
 
+
+https://github.com/user-attachments/assets/8bb449ac-573f-44fe-a18a-ace345800ed4
+
+
+
 ## Features
 
 - **Blog Page**: Displays a list of blogs filterable by category (All, Startup, Lifestyle, Technology).
