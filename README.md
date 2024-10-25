@@ -35,30 +35,30 @@ https://github.com/user-attachments/assets/8bb449ac-573f-44fe-a18a-ace345800ed4
 ## Project Setup
 
 1- Clone the repository:
-```
+ ```
 git clone https://github.com/HebaHamdan2/MyPersonalBlog-App.git
 cd MyPersonlBlog-App
-```
+ ```
 2- Install dependencies:
-```
+ ```
 npm install
-```
+ ```
 3- Set up your **MongoDB connection**:
 - Create a **.env** file in the root directory and add your MongoDB connection string:
-```
+ ```
 MONGODB_URL=your_mongodb_connection_string
-```
+ ```
 4- Set up your **Cloudinary configuration**:
-- Add your Cloudinary credentials to the .env file:
-  ```
-CLOUDINARY_CLOUD_NAME=your_cloud_name
-CLOUDINARY_API_KEY=your_api_key
-CLOUDINARY_API_SECRET=your_api_secret
-  ```
+- Add your Cloudinary credentials to the **.env** file:
+ ```
+  CLOUDINARY_CLOUD_NAME=your_cloud_name
+  CLOUDINARY_API_KEY=your_api_key
+  CLOUDINARY_API_SECRET=your_api_secret
+ ```
 5- Run the development server:
-```
+ ```
 npm run dev
-```
+ ```
 6- Open your browser and navigate to **http://localhost:3000**.
 
 ## Deployment
