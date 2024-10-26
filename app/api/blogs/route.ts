@@ -73,9 +73,6 @@ export async function POST(request: NextRequest) {
         return NextResponse.json({ success: false, msg: "Error uploading image" }, { status: 500 });
     }
 }
-
-
-
 export async function DELETE(request: NextRequest) {
     const id = await request.nextUrl.searchParams.get('id');
     const blog = await BlogModel.findById(id);
