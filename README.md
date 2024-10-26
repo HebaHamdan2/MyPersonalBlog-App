@@ -30,35 +30,43 @@ https://github.com/user-attachments/assets/8bb449ac-573f-44fe-a18a-ace345800ed4
 - **ORM:** Mongoose
 - **HTTP Client:** Axios
 - **Notifications:** React-Toastify
-  
+- **Cloud Storage**: Cloudinary
+
 ## Project Setup
 
 1- Clone the repository:
-```
+ ```
 git clone https://github.com/HebaHamdan2/MyPersonalBlog-App.git
 cd MyPersonlBlog-App
-```
+ ```
 2- Install dependencies:
-```
+ ```
 npm install
-```
+ ```
 3- Set up your **MongoDB connection**:
 - Create a **.env** file in the root directory and add your MongoDB connection string:
-```
+ ```
 MONGODB_URL=your_mongodb_connection_string
-```
-4- Run the development server:
-```
+ ```
+4- Set up your **Cloudinary configuration**:
+- Add your Cloudinary credentials to the **.env** file:
+ ```
+  CLOUDINARY_CLOUD_NAME=your_cloud_name
+  CLOUDINARY_API_KEY=your_api_key
+  CLOUDINARY_API_SECRET=your_api_secret
+ ```
+5- Run the development server:
+ ```
 npm run dev
-```
-5- Open your browser and navigate to **http://localhost:3000**.
+ ```
+6- Open your browser and navigate to **http://localhost:3000**.
 
 ## Deployment
 
 The project is deployed using Vercel.
 
 ## Demo
-You can check out the live demo [here](https://hebablogsapp.vercel.app/).
+You can check out the live demo [here](https://hebablogsapp-hebas-projects-a9daf66d.vercel.app/).
 
 ## Learning Experience
 
