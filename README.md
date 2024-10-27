@@ -23,7 +23,7 @@ https://github.com/user-attachments/assets/8bb449ac-573f-44fe-a18a-ace345800ed4
   
 ## Technologies Used
 
-- **Framework:** Next.js 14
+- **Framework:** Next.js 15
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS
 - **Database:** MongoDB
